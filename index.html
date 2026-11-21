@@ -15,6 +15,88 @@
       padding: 30px;
     }
   </style>
+
+  <!-- Schema.org JSON-LD Structured Data for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Skill to Tools",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Windows, macOS, Linux",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Unified autonomous AI engine converting books, PDFs, videos, and web repositories into standardized Agent Skills and executable Model Context Protocol (MCP) tools.",
+        "url": "https://github.com/WaseemKaluwal/skill-to-tools",
+        "author": {
+          "@type": "Person",
+          "name": "Waseem Kaluwal"
+        }
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Convert Books, PDFs, and Videos into Executable AI Tools",
+        "description": "Step-by-step pipeline to transform documents, videos, and documentation into Agent Skills and FastMCP tool servers.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Ingestion",
+            "text": "Parse books, PDFs, video transcripts, or web documentation using the integrated sub-engines."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Cognitive Extraction",
+            "text": "Extract author frameworks, heuristics, code techniques, and anti-patterns."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Standardization",
+            "text": "Structure knowledge into the open Agent Skills format with validated SKILL.md frontmatter."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "FastMCP Tool Compilation",
+            "text": "Compile the structured skill into an executable FastMCP server exposing callable agent tools."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between Book to Skill and PDF to Skill?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Book to Skill focuses on conceptual frameworks and mental models from literature, while PDF to Skill parses dense technical layouts, tables, and code into modular chapters."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Video to Tool workflow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Video to Tool extracts procedural techniques from video transcripts and wraps them into callable Model Context Protocol (MCP) tool functions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Skill to Tools reduce LLM token usage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "By replacing massive context dumps with indexed, on-demand FastMCP tool calls, reducing prompt token usage by up to 99.2%."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div id="app">Loading documentation...</div>

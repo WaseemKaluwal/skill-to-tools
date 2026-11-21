@@ -1,9 +1,9 @@
 # Skill to Tools: Unified Engine for Book to Skill, Video to Skill, PDF to Skill & Video to Tool
 
-> **The Unified 5-in-1 Autonomous AI Skill & Tool Engineering Ecosystem**  
+> **The Unified Autonomous AI Skill & Tool Engineering Ecosystem**  
 > Turn written books, PDF documents, video courses, and web repositories into standardized Agent Skills and executable Model Context Protocol (MCP) tools.
 
-[![Architecture](https://img.shields.io/badge/Architecture-5--in--1%20Unified-blueviolet.svg)](#)
+[![Architecture](https://img.shields.io/badge/Architecture-Unified-blueviolet.svg)](#)
 [![Standard](https://img.shields.io/badge/Standard-Agent%20Skills%20Open%20Spec-blue.svg)](#)
 [![Protocol](https://img.shields.io/badge/MCP-Python%20SDK%20v2.3-green.svg)](#)
 [![Supported Formats](https://img.shields.io/badge/Formats-PDF%20|%20EPUB%20|%20MP4%20|%20YouTube%20|%20Docs-orange.svg)](#)

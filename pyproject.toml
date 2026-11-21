@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "skill-to-tools"
 version = "1.0.0"
-description = "Unified 5-in-1 AI Skill & Tool Engineering Ecosystem for Book to Skill, Video to Skill, PDF to Skill & Video to Tool"
+description = "Unified AI Skill & Tool Engineering Ecosystem for Book to Skill, Video to Skill, PDF to Skill & Video to Tool"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }

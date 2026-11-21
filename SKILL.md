@@ -1,6 +1,6 @@
 ---
 name: Skill-to-Tools
-description: "Skill-to-Tools Master Ecosystem (5-in-1): Book to Skill, Video to Skill, PDF to Skill, and Video to Tool. Transforms books, PDFs, videos, and web repositories into standardized Agent Skills and executable FastMCP server tools."
+description: "Skill-to-Tools Master Ecosystem: Book to Skill, Video to Skill, PDF to Skill, and Video to Tool. Transforms books, PDFs, videos, and web repositories into standardized Agent Skills and executable FastMCP server tools."
 metadata:
   opencode/slash: "true"
   argument-hint: "check | video <source> | web <url> | repo <url> | book <path> | pdf <path> | mcp <skill_dir> | validate <skill_dir> | pipeline <source>"

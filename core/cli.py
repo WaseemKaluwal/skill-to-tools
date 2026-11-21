@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Skill-to-Tools Unified Command-Line Interface (CLI)
-Exposes the 5-in-1 Master Ecosystem across any terminal or agent prompt:
+Exposes the Master Ecosystem across any terminal or agent prompt:
   - Video-to-Skill (Lum1104/video-to-skill)
   - Skill Seekers (yusufkaraaslan/Skill_Seekers)
   - Book-to-Skill (virgiliojr94/book-to-skill)
@@ -28,7 +28,7 @@ BANNER = """
  _\\ \\  /  '_/ / / / /--/___/ / __/ _ \\    / / / __ \\/ _ \\ / //___/
 /___/ /_/\\_\\ /_/_/_/         \\__/\\___/   /_/  \\___/\\___//_/     
 ========================================================================
- The 5-in-1 Autonomous AI Skill & Tool Engineering Ecosystem
+ The Autonomous AI Skill & Tool Engineering Ecosystem
   [1] Video-to-Skill  [2] Skill Seekers  [3] Book-to-Skill
   [4] MCP Python SDK  [5] Agent Skills Standard
 ========================================================================
@@ -155,7 +155,7 @@ def cmd_pipeline(args, engine):
 def main():
     parser = argparse.ArgumentParser(
         prog="skill-to-tools",
-        description="Skill-to-Tools Unified 5-in-1 AI Skill & Tool Engineering Ecosystem"
+        description="Skill-to-Tools Unified AI Skill & Tool Engineering Ecosystem"
     )
     subparsers = parser.add_subparsers(dest="subcommand", help="Available subcommands")
 

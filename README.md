@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="assets/hero-banner.png" alt="Skill to Tools banner: Ingestion pipeline for Agent Skills and FastMCP tools" width="100%" />
+  <a href="https://github.com/WaseemKaluwal/skill-to-tools">
+    <img src="assets/hero-banner.png" alt="Skill to Tools banner: Ingestion pipeline for Agent Skills and FastMCP tools" width="920" />
+  </a>
 </p>
 
 # Skill to Tools: Unified Engine for Book to Skill, Video to Skill, PDF to Skill & Video to Tool
@@ -62,7 +64,9 @@ Dumping an entire 600-page book or a 4-hour video transcript into an LLM context
 Modern autonomous agents require explicit procedural workflows and callable tools rather than raw text dumps. **Skill to Tools** unifies five specialized upstream frameworks into one automated pipeline:
 
 <p align="center">
-  <img src="assets/pipeline-architecture.png" alt="Skill to Tools Architecture: Pipeline diagram for Book to Skill, Video to Skill, PDF to Skill and Video to Tool" width="100%" />
+  <a href="assets/pipeline-architecture.png">
+    <img src="assets/pipeline-architecture.png" alt="Skill to Tools Architecture: Pipeline diagram for Book to Skill, Video to Skill, PDF to Skill and Video to Tool" width="920" />
+  </a>
 </p>
 
 ### The 5 Integrated Sub-Engines

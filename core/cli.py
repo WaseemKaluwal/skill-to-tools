@@ -14,18 +14,13 @@ import os
 import argparse
 from pathlib import Path
 
-# Ensure core and parent directory are on python path
+# Ensure parent directory is on python path
 CURRENT_DIR = Path(__file__).resolve().parent
 BASE_DIR = CURRENT_DIR.parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
-if str(CURRENT_DIR) not in sys.path:
-    sys.path.insert(0, str(CURRENT_DIR))
 
-try:
-    from core.engine import SkillToToolsEngine
-except ImportError:
-    from engine import SkillToToolsEngine
+from core.engine import SkillToToolsEngine
 
 BANNER = """
 ========================================================================

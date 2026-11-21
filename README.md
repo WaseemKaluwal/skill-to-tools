@@ -3,11 +3,19 @@
 > **The Unified Autonomous AI Skill & Tool Engineering Ecosystem**  
 > Turn written books, PDF documents, video courses, and web repositories into standardized Agent Skills and executable Model Context Protocol (MCP) tools.
 
-[![Architecture](https://img.shields.io/badge/Architecture-Unified-blueviolet.svg)](#)
+[![Releases](https://img.shields.io/github/v/release/WaseemKaluwal/skill-to-tools?style=flat-square&color=blueviolet)](https://github.com/WaseemKaluwal/skill-to-tools/releases)
 [![Standard](https://img.shields.io/badge/Standard-Agent%20Skills%20Open%20Spec-blue.svg)](#)
 [![Protocol](https://img.shields.io/badge/MCP-Python%20SDK%20v2.3-green.svg)](#)
 [![Supported Formats](https://img.shields.io/badge/Formats-PDF%20|%20EPUB%20|%20MP4%20|%20YouTube%20|%20Docs-orange.svg)](#)
 [![Status](https://img.shields.io/badge/Status-100%25%20Operational-brightgreen.svg)](#)
+
+<p align="center">
+  <a href="https://github.com/WaseemKaluwal/skill-to-tools/releases"><strong>Releases</strong></a> ·
+  <a href="#-overview--architecture">Architecture</a> ·
+  <a href="#-book-to-skill--pdf-to-skill-conversion">Book to Skill</a> ·
+  <a href="#-video-to-skill--video-to-tool-pipeline">Video to Skill</a> ·
+  <a href="#-frequently-asked-questions-faq">FAQ</a>
+</p>
 
 ---
 
@@ -17,6 +25,7 @@
 
 ## 📑 Table of Contents
 
+- [Releases](https://github.com/WaseemKaluwal/skill-to-tools/releases)
 - [Overview & Architecture](#-overview--architecture)
 - [Book to Skill & PDF to Skill Conversion](#-book-to-skill--pdf-to-skill-conversion)
 - [Video to Skill & Video to Tool Pipeline](#-video-to-skill--video-to-tool-pipeline)

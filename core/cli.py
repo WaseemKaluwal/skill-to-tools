@@ -17,9 +17,15 @@ from pathlib import Path
 # Ensure core and parent directory are on python path
 CURRENT_DIR = Path(__file__).resolve().parent
 BASE_DIR = CURRENT_DIR.parent
-sys.path.insert(0, str(CURRENT_DIR))
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+if str(CURRENT_DIR) not in sys.path:
+    sys.path.insert(0, str(CURRENT_DIR))
 
-from engine import SkillToToolsEngine
+try:
+    from core.engine import SkillToToolsEngine
+except ImportError:
+    from engine import SkillToToolsEngine
 
 BANNER = """
 ========================================================================

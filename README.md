@@ -1,7 +1,11 @@
+<p align="center">
+  <img src="assets/hero-banner.svg" alt="Skill to Tools banner: Ingestion pipeline for Agent Skills and FastMCP tools" width="100%" />
+</p>
+
 # Skill to Tools: Unified Engine for Book to Skill, Video to Skill, PDF to Skill & Video to Tool
 
 > **The Unified Autonomous AI Skill & Tool Engineering Ecosystem**  
-> Turn written books, PDF documents, video courses, and web repositories into standardized Agent Skills and executable Model Context Protocol (MCP) tools.
+> Turn written books, PDF documents, video courses plus web repositories into standardized Agent Skills and executable Model Context Protocol (MCP) tools.
 
 [![Releases](https://img.shields.io/github/v/release/WaseemKaluwal/skill-to-tools?style=flat-square&color=blueviolet)](https://github.com/WaseemKaluwal/skill-to-tools/releases)
 [![Standard](https://img.shields.io/badge/Standard-Agent%20Skills%20Open%20Spec-blue.svg)](#)
@@ -42,17 +46,9 @@
 
 Modern AI agents require clear procedural workflows and callable tools rather than massive unorganized context dumps. **Skill to Tools** bridges this gap by unifying five industry-standard frameworks into one automated pipeline:
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                        SKILL-TO-TOOLS PIPELINE                         │
-├─────────────────┬──────────────────────────────────────────────────────┤
-│ 1. Ingest       │ Books, PDFs, Videos, YouTube Playlists, Web Docs     │
-│ 2. Extract      │ Book-to-Skill, Video-to-Skill, Skill Seekers         │
-│ 3. Standardize  │ Agent Skills Standard (Clean metadata, modular docs) │
-│ 4. Validate     │ Strict Schema Validation (skills-ref engine)         │
-│ 5. Toolify      │ FastMCP Python SDK (Executable AI Tools & Servers)   │
-└─────────────────┴──────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="assets/pipeline-architecture.svg" alt="Skill to Tools Architecture: Pipeline diagram for Book to Skill, Video to Skill, PDF to Skill and Video to Tool" width="100%" />
+</p>
 
 ### The 5 Integrated Sub-Engines
 

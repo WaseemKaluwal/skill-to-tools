@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="pipeBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="60%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a10" />
+    </linearGradient>
+
+    <!-- Node Gradients -->
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="pipeGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#1f2937" stroke-width="0.5" stroke-opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="600" fill="url(#pipeBgGrad)" rx="16" />
+  <rect width="1200" height="600" fill="url(#pipeGrid)" rx="16" />
+  <rect x="1" y="1" width="1198" height="598" fill="none" stroke="#374151" stroke-width="1.5" rx="16" stroke-opacity="0.7" />
+
+  <!-- Section Header -->
+  <g transform="translate(60, 40)">
+    <text x="0" y="24" fill="#f9fafb" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5">TECHNICAL PIPELINE &amp; ENGINE ARCHITECTURE</text>
+    <text x="0" y="46" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">End-to-end data ingestion, cognitive extraction, Agent Skills normalization, and FastMCP tool compilation</text>
+  </g>
+
+  <!-- Top Badges / Indicators -->
+  <g transform="translate(860, 48)">
+    <rect x="0" y="0" width="130" height="26" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+    <text x="65" y="17" text-anchor="middle" fill="#60a5fa" font-family="monospace" font-size="11" font-weight="600">STRICT VALIDATION</text>
+
+    <rect x="145" y="0" width="135" height="26" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1" />
+    <text x="212" y="17" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="11" font-weight="600">FASTMCP EXECUTABLE</text>
+  </g>
+
+  <!-- LAYER 1: MULTI-MODAL INGESTION -->
+  <g transform="translate(60, 115)">
+    <!-- Column Header -->
+    <rect x="0" y="0" width="205" height="32" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="102" y="20" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">1. SOURCE INGESTION</text>
+
+    <!-- Source Node 1: Books & PDFs -->
+    <g transform="translate(0, 46)">
+      <rect width="205" height="90" rx="8" fill="url(#nodeGrad)" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.8" />
+      <text x="14" y="26" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">03-book-to-skill</text>
+      <text x="14" y="46" fill="#d1d5db" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">PDF, EPUB, MOBI, DOCX</text>
+      <text x="14" y="64" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10">Deep AST layout parsing</text>
+      <text x="14" y="78" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10">Formula &amp; table extraction</text>
+    </g>
+
+    <!-- Source Node 2: Videos & Playlists -->
+    <g transform="translate(0, 150)">
+      <rect width="205" height="90" rx="8" fill="url(#nodeGrad)" stroke="#ef4444" stroke-width="1.2" stroke-opacity="0.8" />
+      <text x="14" y="26" fill="#f87171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">01-video-to-skill</text>
+      <text x="14" y="46" fill="#d1d5db" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">YouTube, Playlists, MP4</text>
+      <text x="14" y="64" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10">Whisper transcript parsing</text>
+      <text x="14" y="78" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10">Timestamp chapter boundaries</text>
+    </g>
+
+    <!-- Source Node 3: Web & Repositories -->
+    <g transform="translate(0, 254)">
+      <rect width="205" height="90" rx="8" fill="url(#nodeGrad)" stroke="#06b6d4" stroke-width="1.2" stroke-opacity="0.8" />
+      <text x="14" y="26" fill="#22d3ee" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">02-skill-seekers</text>
+      <text x="14" y="46" fill="#d1d5db" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">Documentation &amp; Repos</text>
+      <text x="14" y="64" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10">Tree structure crawler</text>
+      <text x="14" y="78" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10">Codebase architecture maps</text>
+    </g>
+  </g>
+
+  <!-- Connectors: Layer 1 -> Layer 2 -->
+  <g stroke="#475569" stroke-width="1.5" fill="none">
+    <path d="M 265 205 L 305 205 L 305 290 L 330 290" />
+    <path d="M 265 310 L 330 310" />
+    <path d="M 265 415 L 305 415 L 305 330 L 330 330" />
+  </g>
+
+  <!-- LAYER 2: EXTRACTION & COGNITIVE DISTILLATION -->
+  <g transform="translate(330, 115)">
+    <rect x="0" y="0" width="230" height="32" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="115" y="20" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">2. COGNITIVE EXTRACTION</text>
+
+    <rect y="46" width="230" height="350" rx="10" fill="url(#nodeGrad)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.8" />
+
+    <!-- Feature blocks inside Layer 2 -->
+    <g transform="translate(16, 68)">
+      <circle cx="6" cy="6" r="4" fill="#38bdf8" />
+      <text x="18" y="10" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">Framework Synthesis</text>
+      <text x="18" y="28" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">Mental models, heuristics,</text>
+      <text x="18" y="42" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">and core author principles.</text>
+    </g>
+
+    <g transform="translate(16, 138)">
+      <circle cx="6" cy="6" r="4" fill="#38bdf8" />
+      <text x="18" y="10" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">Procedural Techniques</text>
+      <text x="18" y="28" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">Step-by-step algorithms,</text>
+      <text x="18" y="42" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">code walkthroughs &amp; rules.</text>
+    </g>
+
+    <g transform="translate(16, 208)">
+      <circle cx="6" cy="6" r="4" fill="#38bdf8" />
+      <text x="18" y="10" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">Anti-Pattern Traps</text>
+      <text x="18" y="28" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">Common failure modes,</text>
+      <text x="18" y="42" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">subtle gotchas &amp; warnings.</text>
+    </g>
+
+    <g transform="translate(16, 278)">
+      <circle cx="6" cy="6" r="4" fill="#38bdf8" />
+      <text x="18" y="10" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">Semantic AST Chunking</text>
+      <text x="18" y="28" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">Markdown token budgets &amp;</text>
+      <text x="18" y="42" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">chapter cross-referencing.</text>
+    </g>
+  </g>
+
+  <!-- Connectors: Layer 2 -> Layer 3 -->
+  <g stroke="#38bdf8" stroke-width="1.8" fill="none">
+    <path d="M 560 310 L 600 310" marker-end="url(#arrow)" />
+  </g>
+
+  <!-- LAYER 3: AGENT SKILLS SPECIFICATION & VALIDATION -->
+  <g transform="translate(600, 115)">
+    <rect x="0" y="0" width="245" height="32" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="122" y="20" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">3. AGENT SKILLS SPEC</text>
+
+    <rect y="46" width="245" height="350" rx="10" fill="url(#nodeGrad)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.8" />
+
+    <!-- Spec Node 1: Standardized Directory Structure -->
+    <g transform="translate(16, 68)">
+      <text x="0" y="10" fill="#a5b4fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">05-agent-skills Spec</text>
+      
+      <!-- Mini File Tree -->
+      <g transform="translate(0, 24)" font-family="monospace" font-size="11" fill="#cbd5e1">
+        <text x="0" y="14" fill="#38bdf8">my-extracted-skill/</text>
+        <text x="12" y="32">├── SKILL.md</text>
+        <text x="12" y="50">├── chapters/</text>
+        <text x="24" y="68" fill="#94a3b8">├── 01-concepts.md</text>
+        <text x="24" y="86" fill="#94a3b8">└── 02-patterns.md</text>
+        <text x="12" y="104">└── references/</text>
+        <text x="24" y="122" fill="#94a3b8">└── glossary.md</text>
+      </g>
+    </g>
+
+    <!-- Spec Node 2: Validation Gate -->
+    <g transform="translate(16, 235)">
+      <rect width="213" height="140" rx="8" fill="#1e1e2e" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.7" />
+      <text x="12" y="24" fill="#34d399" font-family="monospace" font-size="11" font-weight="700">✓ skills-ref Validator</text>
+      <text x="12" y="46" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">• YAML Frontmatter Schema</text>
+      <text x="12" y="66" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">• Name &amp; Description Specs</text>
+      <text x="12" y="86" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">• Modular File Link Integrity</text>
+      <text x="12" y="106" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">• 100% Deterministic Pass</text>
+      <rect x="12" y="116" width="70" height="16" rx="4" fill="#064e3b" />
+      <text x="47" y="128" text-anchor="middle" fill="#6ee7b7" font-family="monospace" font-size="9" font-weight="700">VERIFIED</text>
+    </g>
+  </g>
+
+  <!-- Connectors: Layer 3 -> Layer 4 -->
+  <g stroke="#818cf8" stroke-width="1.8" fill="none">
+    <path d="M 845 310 L 885 310" />
+  </g>
+
+  <!-- LAYER 4: FASTMCP TOOL COMPILATION -->
+  <g transform="translate(885, 115)">
+    <rect x="0" y="0" width="255" height="32" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="127" y="20" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">4. FASTMCP TOOL ENGINE</text>
+
+    <rect y="46" width="255" height="350" rx="10" fill="url(#nodeGrad)" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.8" />
+
+    <g transform="translate(16, 68)">
+      <text x="0" y="10" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">04-mcp-python-sdk</text>
+      <text x="0" y="30" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">FastMCP Server Generator</text>
+      
+      <!-- Python Code Mockup -->
+      <rect y="44" width="223" height="120" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <g font-family="monospace" font-size="10.5" fill="#94a3b8">
+        <text x="10" y="64" fill="#f43f5e">from</text> <text x="40" y="64" fill="#e2e8f0">mcp.server.fastmcp</text>
+        <text x="10" y="80" fill="#f43f5e">import</text> <text x="54" y="80" fill="#38bdf8">FastMCP</text>
+        <text x="10" y="102" fill="#e2e8f0">mcp = FastMCP("SkillTool")</text>
+        <text x="10" y="124" fill="#818cf8">@mcp.tool()</text>
+        <text x="10" y="142" fill="#34d399">def query_framework(...):</text>
+      </g>
+    </g>
+
+    <!-- Consumer Agents Integration -->
+    <g transform="translate(16, 255)">
+      <text x="0" y="10" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">Universal Agent Consumers</text>
+      
+      <g transform="translate(0, 20)">
+        <rect x="0" y="0" width="105" height="26" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="52" y="17" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5">Claude Code</text>
+
+        <rect x="115" y="0" width="105" height="26" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="167" y="17" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5">Google AGY</text>
+
+        <rect x="0" y="34" width="105" height="26" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="52" y="51" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5">Cursor IDE</text>
+
+        <rect x="115" y="34" width="105" height="26" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="167" y="51" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5">OpenAI Codex</text>
+
+        <rect x="0" y="68" width="220" height="26" rx="5" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="110" y="85" text-anchor="middle" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5">GitHub Copilot &amp; Hermes</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Command Snippets Strip -->
+  <g transform="translate(60, 525)">
+    <rect width="1080" height="42" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="24" y="26" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">$ stt</text>
+    <text x="75" y="26" fill="#e2e8f0" font-family="monospace" font-size="11.5">pipeline "https://youtu.be/..." --build-mcp</text>
+    <text x="440" y="26" fill="#475569" font-family="monospace" font-size="12">|</text>
+    <text x="465" y="26" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">$ stt</text>
+    <text x="515" y="26" fill="#e2e8f0" font-family="monospace" font-size="11.5">book "handbook.pdf" --mode technical</text>
+    <text x="835" y="26" fill="#475569" font-family="monospace" font-size="12">|</text>
+    <text x="860" y="26" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">$ stt</text>
+    <text x="910" y="26" fill="#e2e8f0" font-family="monospace" font-size="11.5">validate ./my-skill</text>
+  </g>
+</svg>

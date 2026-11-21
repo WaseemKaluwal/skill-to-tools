@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#080c14" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.6" />
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="460" fill="url(#bgGradient)" rx="16" />
+  <rect width="1200" height="460" fill="url(#grid)" rx="16" />
+
+  <!-- Outer Border -->
+  <rect x="1" y="1" width="1198" height="458" fill="none" stroke="#334155" stroke-width="1.5" rx="16" stroke-opacity="0.8" />
+
+  <!-- Top Decorative Badge -->
+  <g transform="translate(430, 36)">
+    <rect x="0" y="0" width="340" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="16" cy="14" r="5" fill="#10b981" />
+    <text x="32" y="18" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.2">UNIFIED AUTONOMOUS ENGINEERING ECOSYSTEM</text>
+  </g>
+
+  <!-- Hero Title -->
+  <text x="600" y="105" text-anchor="middle" fill="url(#accentGradient)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.8">SKILL TO TOOLS</text>
+  
+  <!-- Hero Subtitle -->
+  <text x="600" y="136" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="400">
+    Transform Books, PDFs, Videos, and Web Documentation into Standardized Agent Skills &amp; Executable MCP Tools
+  </text>
+
+  <!-- Workflow Pipeline Cards -->
+  <!-- CARD 1: Ingestion Sources -->
+  <g transform="translate(50, 175)">
+    <rect width="240" height="175" rx="12" fill="url(#cardGrad1)" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.7" />
+    <rect x="16" y="14" width="76" height="20" rx="4" fill="#78350f" fill-opacity="0.5" />
+    <text x="54" y="28" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="700">01 INGEST</text>
+    
+    <text x="16" y="58" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">Knowledge Ingestion</text>
+    <text x="16" y="82" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">📖 Books (.epub, .mobi)</text>
+    <text x="16" y="104" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">📄 Documents (.pdf, .docx)</text>
+    <text x="16" y="126" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">🎥 Videos (YouTube, .mp4)</text>
+    <text x="16" y="148" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">🌐 Web Docs &amp; Git Repos</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(295, 255)">
+    <path d="M 0 0 L 32 0 M 24 -6 L 32 0 L 24 6" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- CARD 2: Extraction & Processing -->
+  <g transform="translate(332, 175)">
+    <rect width="240" height="175" rx="12" fill="url(#cardGrad1)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.7" />
+    <rect x="16" y="14" width="76" height="20" rx="4" fill="#0c4a6e" fill-opacity="0.6" />
+    <text x="54" y="28" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">02 EXTRACT</text>
+    
+    <text x="16" y="58" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">Cognitive Extraction</text>
+    <text x="16" y="82" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">⚡ Mental Models &amp; Heuristics</text>
+    <text x="16" y="104" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">⚡ Transcripts &amp; Timestamps</text>
+    <text x="16" y="126" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">⚡ AST Markdown Chunking</text>
+    <text x="16" y="148" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">⚡ Anti-Pattern Detection</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(577, 255)">
+    <path d="M 0 0 L 32 0 M 24 -6 L 32 0 L 24 6" fill="none" stroke="#818cf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- CARD 3: Standardization -->
+  <g transform="translate(614, 175)">
+    <rect width="240" height="175" rx="12" fill="url(#cardGrad1)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.7" />
+    <rect x="16" y="14" width="86" height="20" rx="4" fill="#312e81" fill-opacity="0.6" />
+    <text x="59" y="28" text-anchor="middle" fill="#a5b4fc" font-family="monospace" font-size="10" font-weight="700">03 STANDARDIZE</text>
+    
+    <text x="16" y="58" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">Agent Skills Spec</text>
+    <text x="16" y="82" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">📁 Structured `SKILL.md`</text>
+    <text x="16" y="104" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">📁 Validated Frontmatter</text>
+    <text x="16" y="126" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">📁 Modular `chapters/`</text>
+    <text x="16" y="148" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">📁 Strict `skills-ref` 100%</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <g transform="translate(859, 255)">
+    <path d="M 0 0 L 32 0 M 24 -6 L 32 0 L 24 6" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- CARD 4: MCP Executable Tools -->
+  <g transform="translate(896, 175)">
+    <rect width="254" height="175" rx="12" fill="url(#cardGrad1)" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.7" />
+    <rect x="16" y="14" width="80" height="20" rx="4" fill="#064e3b" fill-opacity="0.6" />
+    <text x="56" y="28" text-anchor="middle" fill="#6ee7b7" font-family="monospace" font-size="10" font-weight="700">04 TOOLIFY</text>
+    
+    <text x="16" y="58" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">FastMCP Tools</text>
+    <text x="16" y="82" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">⚙️ Production `server.py`</text>
+    <text x="16" y="104" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">⚙️ Deterministic Tool Calls</text>
+    <text x="16" y="126" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">⚙️ Stdio / SSE Transport</text>
+    <text x="16" y="148" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">⚙️ Claude, Gemini, Cursor</text>
+  </g>
+
+  <!-- Bottom Capability Chips -->
+  <g transform="translate(145, 385)">
+    <!-- Chip 1 -->
+    <rect x="0" y="0" width="165" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="82" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">📚 Book to Skill</text>
+
+    <!-- Chip 2 -->
+    <rect x="185" y="0" width="165" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="267" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">🎥 Video to Skill</text>
+
+    <!-- Chip 3 -->
+    <rect x="370" y="0" width="165" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="452" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">📄 PDF to Skill</text>
+
+    <!-- Chip 4 -->
+    <rect x="555" y="0" width="165" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="637" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">⚡ Video to Tool</text>
+
+    <!-- Chip 5 -->
+    <rect x="740" y="0" width="165" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="822" y="21" text-anchor="middle" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">🌐 Web to Skill</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+[submodule "modules/01-video-to-skill"]
+	path = modules/01-video-to-skill
+	url = https://github.com/Lum1104/video-to-skill.git
+[submodule "modules/02-skill-seekers"]
+	path = modules/02-skill-seekers
+	url = https://github.com/yusufkaraaslan/Skill_Seekers.git
+[submodule "modules/03-book-to-skill"]
+	path = modules/03-book-to-skill
+	url = https://github.com/virgiliojr94/book-to-skill.git
+[submodule "modules/04-mcp-python-sdk"]
+	path = modules/04-mcp-python-sdk
+	url = https://github.com/modelcontextprotocol/python-sdk.git
+[submodule "modules/05-agent-skills"]
+	path = modules/05-agent-skills
+	url = https://github.com/agentskills/agentskills.git

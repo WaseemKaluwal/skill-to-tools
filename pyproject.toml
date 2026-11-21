@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "skill-to-tools"
+version = "1.0.0"
+description = "Unified 5-in-1 AI Skill & Tool Engineering Ecosystem for Book to Skill, Video to Skill, PDF to Skill & Video to Tool"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Skill-to-Tools Maintainers" }
+]
+keywords = [
+    "skill-to-tools",
+    "book-to-skill",
+    "video-to-skill",
+    "pdf-to-skill",
+    "video-to-tool",
+    "agent-skills",
+    "mcp",
+    "model-context-protocol",
+    "skill-seekers",
+    "ai-tools"
+]
+dependencies = [
+    "mcp>=2.0.0",
+    "strictyaml>=1.7.0",
+    "pypdf>=5.0.0",
+    "pdfminer.six>=20240100",
+    "trafilatura>=2.0.0",
+    "beautifulsoup4>=4.12.0",
+    "python-docx>=1.1.0",
+    "ebooklib>=0.18"
+]
+
+[project.scripts]
+stt = "core.cli:main"
+skill-to-tools = "core.cli:main"

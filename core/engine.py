@@ -16,6 +16,17 @@ import json
 import shutil
 from pathlib import Path
 
+# Auto-inject static_ffmpeg and user Python scripts to ensure ffmpeg, ffprobe, and CLI tools are discoverable
+try:
+    import static_ffmpeg
+    static_ffmpeg.add_paths()
+except Exception:
+    pass
+
+user_scripts = Path(os.environ.get("APPDATA", "")) / "Python" / f"Python{sys.version_info.major}{sys.version_info.minor}" / "Scripts"
+if user_scripts.is_dir() and str(user_scripts) not in os.environ.get("PATH", ""):
+    os.environ["PATH"] = str(user_scripts) + os.pathsep + os.environ.get("PATH", "")
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 MODULES_DIR = BASE_DIR / "modules"
 MODULE_VIDEO = MODULES_DIR / "01-video-to-skill"
@@ -31,10 +42,12 @@ class SkillToToolsEngine:
 
     def check_environment(self):
         """Audit all 5 core modules and dependencies."""
+        ffmpeg_bin = shutil.which("ffmpeg")
         report = {
             "modules": {},
             "python": sys.version.split()[0],
             "executable": sys.executable,
+            "ffmpeg": ffmpeg_bin or "Missing (static_ffmpeg fallback active)",
         }
 
         # Check 01-video-to-skill
@@ -148,12 +161,26 @@ class SkillToToolsEngine:
         except Exception as e:
             return {"success": False, "error": str(e)}
 
-    def convert_video(self, video_input, output_dir=None):
+    def convert_video(self, video_input, output_dir=None, host="codex", language=None, output_language=None):
         """Convert video or playlist to skill using 01-video-to-skill."""
-        v_script = MODULE_VIDEO / "scripts" / "video_to_skill.py"
-        cmd = [sys.executable, str(v_script), str(video_input)]
+        import tempfile
+        workspace_dir = Path(output_dir) if output_dir else Path(tempfile.gettempdir()) / "video_to_skill_workspace"
+        workspace_dir.mkdir(parents=True, exist_ok=True)
+
+        cmd = [
+            sys.executable,
+            "-m", "video_to_skill.cli",
+            "run",
+            str(video_input),
+            "--workspace", str(workspace_dir),
+            "--host", str(host),
+        ]
         if output_dir:
-            cmd.extend(["--output-dir", str(output_dir)])
+            cmd.extend(["--output", str(output_dir)])
+        if language:
+            cmd.extend(["--language", str(language)])
+        if output_language:
+            cmd.extend(["--output-language", str(output_language)])
 
         env = os.environ.copy()
         env["PYTHONPATH"] = str(MODULE_VIDEO / "src") + os.pathsep + env.get("PYTHONPATH", "")
@@ -164,7 +191,8 @@ class SkillToToolsEngine:
                 "success": res.returncode == 0,
                 "stdout": res.stdout,
                 "stderr": res.stderr,
-                "video": str(video_input)
+                "video": str(video_input),
+                "workspace": str(workspace_dir),
             }
         except Exception as e:
             return {"success": False, "error": str(e)}

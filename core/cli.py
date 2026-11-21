@@ -42,7 +42,8 @@ def cmd_check(args, engine):
     print_banner()
     print(">>> Auditing Skill-to-Tools 5-Engine Architecture:\n")
     report = engine.check_environment()
-    print(f"Python Runtime: {report['python']} ({report['executable']})\n")
+    print(f"Python Runtime: {report['python']} ({report['executable']})")
+    print(f"FFmpeg Binary : {report.get('ffmpeg', 'N/A')}\n")
     
     for mod_name, mod_info in report["modules"].items():
         status = "[READY]" if mod_info["available"] else "[MISSING]"
@@ -83,7 +84,12 @@ def cmd_detect(args, engine):
 
 def cmd_video(args, engine):
     print(f">>> [Module 1: Video-to-Skill] Ingesting video/course: {args.source}")
-    res = engine.convert_video(args.source, output_dir=args.output)
+    res = engine.convert_video(
+        args.source,
+        output_dir=args.output,
+        language=getattr(args, "language", None),
+        output_language=getattr(args, "output_language", None),
+    )
     if res["success"]:
         print("\n[SUCCESS] Video skill generated:")
         print(res.get("stdout", ""))
@@ -206,6 +212,8 @@ def main():
     p_video = subparsers.add_parser("video", help="Extract skill from Video or Course (Video-to-Skill)")
     p_video.add_argument("source", help="Video file or YouTube/course URL")
     p_video.add_argument("--output", help="Output directory")
+    p_video.add_argument("--language", help="Source caption / ASR language (e.g. ur, hi, en, auto)")
+    p_video.add_argument("--output-language", help="Canonical generated-artifact language (e.g. en, ur, hi, source)")
     p_video.set_defaults(func=cmd_video)
 
     # validate
